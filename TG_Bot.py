@@ -1,5 +1,6 @@
 import asyncio
-from pyrogram import Client, filters
+import pyrogram # <--- এই লাইনটি আগে মিসিং ছিল
+from pyrogram import Client, filters, idle
 from pyrogram.types import Message
 from aiohttp import web
 
@@ -7,7 +8,7 @@ from aiohttp import web
 API_ID = 31901417  
 API_HASH = "28895c2d7e9f19d3c1bb3da41d392ba2"
 BOT_TOKEN = "8452576663:AAG-fJQrq6_SXCw1l1Oj3I2ZI8VEUxPVPLY"
-ADMIN_ID = 1234567890  # <--- আপনার টেলিগ্রাম আইডি দিন
+ADMIN_ID = 1234567890  # <--- ⚠️ এখানে আপনার আইডি বসাতে ভুলবেন না
 AUTO_DELETE_TIME = 3600
 
 # --- বট সেটআপ ---
@@ -83,8 +84,8 @@ async def start_command(client, message: Message):
 async def main():
     await app.start()
     print("বট চালু হয়েছে...")
-    await web_server() # সার্ভার চালু হচ্ছে
-    await pyrogram.idle() # বটকে থামতে দিচ্ছে না
+    await web_server()
+    await idle() # <--- এখানে পরিবর্তন করা হয়েছে
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
