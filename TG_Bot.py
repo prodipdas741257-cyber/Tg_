@@ -13,7 +13,7 @@ ADMIN_ID = 6201674394  # <--- আপনার টেলিগ্রাম আই
 AUTO_DELETE_TIME = 3600
 
 # ⚠️ MongoDB লিংক (পাসওয়ার্ড বসাতে ভুলবেন না)
-MONGODB_URL = "mongodb+srv://Jk_movee:pradip123@cluster0.mongodb.net/?retryWrites=true&w=majority"
+MONGODB_URL = "mongodb+srv://Jk_movee:pradip123@cluster0.q72ai3d.mongodb.net/?appName=Cluster0"
 
 # --- মঙ্গোডিবি সেটআপ ---
 mongo_client = motor.motor_asyncio.AsyncIOMotorClient(MONGODB_URL)
@@ -78,7 +78,7 @@ async def start_command(client, message: Message):
             file_id = file_data["file_id"]
             msg = await message.reply_text("📥 Processing...")
             
-            caption_text = f"🎬 Enjoy!\n⚠️ Auto-delete in {AUTO_DELETE_TIME}s.\n🔥 Join: @Rock_pro1"
+            caption_text = f"🎬 Enjoy!\n⚠️ Auto-delete in {AUTO_DELETE_TIME}s.\n🔥 Join: @JK_Movee"
 
             try:
                 sent_msg = await message.reply_video(video=file_id, caption=caption_text)
