@@ -13,7 +13,7 @@ ADMIN_ID = 6201674394  # <--- আপনার টেলিগ্রাম আই
 AUTO_DELETE_TIME = 3600
 
 # ⚠️ MongoDB লিংক (পাসওয়ার্ড বসাতে ভুলবেন না)
-MONGODB_URL = "mongodb+srv://Jk_movee:Pradip@das@321@cluster0.q72ai3d.mongodb.net/?appName=Cluster0"
+MONGODB_URL = "mongodb+srv://Jk_movee:pradip123@cluster0.mongodb.net/?retryWrites=true&w=majority"
 
 # --- মঙ্গোডিবি সেটআপ ---
 mongo_client = motor.motor_asyncio.AsyncIOMotorClient(MONGODB_URL)
